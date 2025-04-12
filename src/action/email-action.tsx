@@ -25,7 +25,7 @@ export const sendEmail = async ({ to, link, subject }: emailAction) => {
                 user_id: process.env.EMAILJS_PUBLIC_KEY,
                 accessToken: process.env.EMAILJS_ACCESS_TOKEN,
                 template_params: {
-                    app_name: process.env.APP_NAME,
+                    app_name: process.env.NEXT_PUBLIC_APP_NAME,
                     subject: subject,
                     email: to,
                     link: link,
