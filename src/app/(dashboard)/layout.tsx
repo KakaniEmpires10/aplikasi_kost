@@ -1,4 +1,4 @@
-import { SiteHeader } from "@/components/features/dahsboard/main/site-header";
+import { SiteHeader } from "@/components/features/dashboard/main/site-header";
 import { AppSidebar } from "@/components/layouts/dashboard/app-sidebar"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { Metadata } from "next";

@@ -22,8 +22,8 @@ export const listDashboardNav = {
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Kost",
+      url: "/dashboard/all-kost",
       icon: IconListDetails,
     },
     {
