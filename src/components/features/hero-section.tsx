@@ -13,7 +13,7 @@ export default function HeroSection() {
               <p className="mt-8">Error totam sit illum. Voluptas doloribus asperiores quaerat aperiam. Quidem harum omnis beatae ipsum soluta!</p>
 
               <div>
-                <form action="" className="mx-auto my-10 max-w- lg:my-12 lg:ml-0 lg:mr-auto">
+                <form action="" className="mx-auto my-10 lg:my-12 lg:ml-0 lg:mr-auto">
                   <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
                     <HouseIcon className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
 
