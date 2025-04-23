@@ -1,9 +1,6 @@
 "use client"
 
 import {
-    useState
-} from "react"
-import {
     toast
 } from "sonner"
 import {
@@ -27,23 +24,16 @@ import {
 } from "@/components/ui/form"
 import {
     LoaderCircle,
-    Paperclip
 } from "lucide-react"
 import {
     Input
 } from "@/components/ui/input"
 import { updateProfileSchema } from "../setting.constant"
-import { FileInput, FileUploader, FileUploaderContent, FileUploaderItem } from "@/components/ui/file-input"
-import { IconPencilCog, IconUserCircle } from "@tabler/icons-react"
+import { IconPencilCog } from "@tabler/icons-react"
 import { Session } from "@/lib/auth"
+import AvatarUpload from "@/components/ui/avatar-upload"
 
 function FormUpdateProfile({ session }: { session: Session['user'] | null | undefined }) {
-    const [files, setFiles] = useState<File[] | null>(null);
-
-    const dropZoneConfig = {
-        maxSize: 1024 * 1024 * 4,
-        reSelect: true,
-    };
     const form = useForm<z.infer<typeof updateProfileSchema>>({
         resolver: zodResolver(updateProfileSchema),
         defaultValues: {
@@ -79,38 +69,7 @@ function FormUpdateProfile({ session }: { session: Session['user'] | null | unde
                                 <FormLabel className="mx-auto text-card-foreground">Foto Profile</FormLabel>
                                 <FormDescription>Ini akan menjadi foto profile-mu di aplikasi ini</FormDescription>
                                 <FormControl>
-                                    <FileUploader
-                                        value={files}
-                                        onValueChange={setFiles}
-                                        dropzoneOptions={dropZoneConfig}
-                                        className="relative bg-card w-fit p-1 mx-auto"
-                                    >
-                                        <FileInput
-                                            id="fileInput"
-                                            className="outline-dashed w-48 h-48 outline-1 outline-slate-500"
-                                        >
-                                            <div className="flex items-center justify-center flex-col p-8 w-full ">
-                                                <IconUserCircle className='text-gray-500 w-25 h-15' />
-                                                <p className="mb-1 text-sm text-gray-500 dark:text-gray-400 text-center">
-                                                    <span className="font-semibold">Click to upload</span>
-                                                    &nbsp; or drag and drop
-                                                </p>
-                                                <p className="text-xs text-gray-500 dark:text-gray-400">
-                                                    SVG, PNG, JPG or GIF
-                                                </p>
-                                            </div>
-                                        </FileInput>
-                                        <FileUploaderContent>
-                                            {files &&
-                                                files.length > 0 &&
-                                                files.map((file, i) => (
-                                                    <FileUploaderItem key={i} index={i}>
-                                                        <Paperclip className="h-4 w-4 stroke-current" />
-                                                        <span>{file.name}</span>
-                                                    </FileUploaderItem>
-                                                ))}
-                                        </FileUploaderContent>
-                                    </FileUploader>
+                                    <AvatarUpload />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
