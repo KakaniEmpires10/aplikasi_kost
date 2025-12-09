@@ -8,7 +8,7 @@ import Image from 'next/image'
 const UserCard = ({ session }: { session: Session | null | undefined }) => {
 
     return (
-        <Card>
+        <Card className='overflow-hidden'>
             <div className="flex items-center justify-between space-x-4 py-2 px-8">
                 <div className="flex items-center gap-4">
                     <Image

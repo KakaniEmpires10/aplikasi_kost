@@ -1,7 +1,5 @@
 "use client"
-import {
-    toast
-} from "sonner"
+
 import {
     useForm
 } from "react-hook-form"
@@ -29,6 +27,7 @@ import { Separator } from "@/components/ui/separator"
 import { LoaderCircle } from "lucide-react"
 import { IconPencilCog } from "@tabler/icons-react"
 import { authClient } from "@/lib/auth-client"
+import toast from "react-hot-toast"
 
 function FormUpdatePassword() {
 

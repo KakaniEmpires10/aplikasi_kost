@@ -131,7 +131,7 @@ export default function NotFound() {
           <h1 className="text-[100px] font-black text-gray-100 leading-none">404</h1>
 
           {/* Gradient overlay for style */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 flex -top-3 left-2 justify-center pointer-events-none">
             <div className={`${mounted ? "animate-in zoom-in-50 duration-700" : "opacity-0"}`}>
               <span className="text-[100px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
                 404
@@ -241,7 +241,7 @@ export default function NotFound() {
             {[
               { name: "Tentang Kami", path: "/tentang-kami" },
               { name: "Layanan", path: "/layanan" },
-              { name: "Testimoni", path: "/testimoni" },
+              { name: "Login / Register", path: "/authentication" },
             ].map((item, index) => (
               <Link
                 key={index}

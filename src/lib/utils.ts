@@ -18,3 +18,5 @@ export function formatCurrency(amount: number) {
     currency: "IDR",
   }).format(amount);
 }
+
+export const fetcher = (url: string) => fetch(url).then(res => res.json());

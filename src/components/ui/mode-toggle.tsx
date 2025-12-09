@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 import { MoonIcon, SunIcon } from "lucide-react";
 
-export function ModeToggle({ size = "icon" }: { size?: "icon" | "iconSm" }) {
+export function ModeToggle({ size = "icon" }: { size?: "icon" | "icon-sm" }) {
   const { setTheme, theme } = useTheme();
 
   return (

@@ -16,7 +16,7 @@ const EditPasswordCard = () => {
                 <CardTitle>Update Password <span
                     role='button'
                     tabIndex={0}
-                    className={buttonVariants({ variant: 'secondary', size: 'iconSm' })}
+                    className={buttonVariants({ variant: 'secondary', size: 'icon-sm' })}
                     onClick={() => setOpen((prev) => !prev)}
                 >
                     <HelpCircleIcon />

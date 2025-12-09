@@ -1,10 +1,7 @@
-import DashboardTitle from "@/components/layouts/dashboard/dashboard-title"
-import { Button } from "@/components/ui/button"
+import DashboardBreadcrumb from "@/components/layouts/dashboard/dashboard-breadcrumb"
 import { ModeToggle } from "@/components/ui/mode-toggle"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { Home } from "lucide-react"
-import Link from "next/link"
 
 export function SiteHeader() {
   return (
@@ -15,17 +12,9 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-        <DashboardTitle />
+        <DashboardBreadcrumb />
         <div className="ml-auto flex items-center gap-2">
-          <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
-            <Link
-              href="/"
-              className="dark:text-foreground"
-            >
-              <Home /> Home
-            </Link>
-          </Button>
-          <ModeToggle size="iconSm" />
+          <ModeToggle size="icon-sm" />
         </div>
       </div>
     </header>

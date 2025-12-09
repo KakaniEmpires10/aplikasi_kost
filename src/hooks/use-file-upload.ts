@@ -87,11 +87,11 @@ export const useFileUpload = (
     (file: File | FileMetadata): string | null => {
       if (file instanceof File) {
         if (file.size > maxSize) {
-          return `File "${file.name}" exceeds the maximum size of ${formatBytes(maxSize)}.`
+          return `Ukuran File "${file.name}" melebihi batas maksimum yaitu ${formatBytes(maxSize)}.`
         }
       } else {
         if (file.size > maxSize) {
-          return `File "${file.name}" exceeds the maximum size of ${formatBytes(maxSize)}.`
+          return `Ukuran File "${file.name}" melebihi batas maksimum yaitu ${formatBytes(maxSize)}.`
         }
       }
 
@@ -187,7 +187,7 @@ export const useFileUpload = (
         maxFiles !== Infinity &&
         state.files.length + newFilesArray.length > maxFiles
       ) {
-        errors.push(`You can only upload a maximum of ${maxFiles} files.`)
+        errors.push(`Anda Hanya boleh meng-upload maksimal ${maxFiles} file.`)
         setState((prev) => ({ ...prev, errors }))
         return
       }
@@ -211,8 +211,8 @@ export const useFileUpload = (
         if (file.size > maxSize) {
           errors.push(
             multiple
-              ? `Some files exceed the maximum size of ${formatBytes(maxSize)}.`
-              : `File exceeds the maximum size of ${formatBytes(maxSize)}.`
+              ? `Beberapa file melebihi ukuran maksimal yaitu ${formatBytes(maxSize)}.`
+              : `File melebihi ukuran maksimal yaitu ${formatBytes(maxSize)}.`
           )
           return
         }

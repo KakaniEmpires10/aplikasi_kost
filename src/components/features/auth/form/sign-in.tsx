@@ -8,9 +8,9 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { signInSchema } from "../auth.constant"
 import { z } from "zod"
-import { toast } from "sonner"
 import { LoaderCircle, Save } from "lucide-react"
 import { authClient } from "@/lib/auth-client"
+import toast from "react-hot-toast"
 
 const SignInForm = ({ tab }: { tab?: boolean }) => {
   const form = useForm<z.infer<typeof signInSchema>>({

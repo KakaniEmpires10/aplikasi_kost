@@ -1,5 +1,7 @@
 import { SiteHeader } from "@/components/features/dashboard/main/site-header";
+import TitlePage from "@/components/features/dashboard/TitlePage";
 import { AppSidebar } from "@/components/layouts/dashboard/app-sidebar"
+import { Separator } from "@/components/ui/separator";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { Metadata } from "next";
 
@@ -20,7 +22,9 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode; }>)
       <AppSidebar variant="inset" />
       <SidebarInset>
         <SiteHeader />
-        <section className="@container/main flex flex-col gap-4 py-4 px-4 md:gap-6 md:py-6 lg:px-6">
+        <section className="@container/main flex flex-col gap-3 py-4 px-4 md:gap-4 md:py-6 lg:px-6">
+          <TitlePage />
+          <Separator />
           {children}
         </section>
       </SidebarInset>

@@ -32,8 +32,8 @@ const GridKost = () => {
                                     </div>
                                 </div>
                                 <div className="space-x-1">
-                                    <Button size="iconSm"><Pencil /></Button>
-                                    <Button variant="destructive" size="iconSm"><Trash2 /></Button>
+                                    <Button size="icon-sm"><Pencil /></Button>
+                                    <Button variant="destructive" size="icon-sm"><Trash2 /></Button>
                                 </div>
                             </div>
                             <Separator className="my-4" />

@@ -1,17 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images:{
-    remotePatterns :[
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
+  images: {
+    remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'unsplash.com',
-        port: '',
-        pathname: '/photos/**',
-        search: '',
+        protocol: "https",
+        hostname: "res.cloudinary.com",
       },
     ],
-  }
+  },
 };
 
 export default nextConfig;

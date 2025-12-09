@@ -5,12 +5,12 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { PasswordInput } from "@/components/ui/password-input"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { toast } from "sonner"
 import { z } from "zod"
 import { signUpSchema } from "../auth.constant"
 import { useForm } from "react-hook-form"
 import { authClient } from "@/lib/auth-client"
 import { LoaderCircle, Save } from "lucide-react"
+import toast from "react-hot-toast"
 
 const SignUpForm = ({ tab }: { tab: boolean }) => {
 

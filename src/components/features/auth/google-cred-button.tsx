@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { authClient } from "@/lib/auth-client"
 import { LoaderCircle } from "lucide-react"
 import { useState } from "react"
-import { toast } from "sonner"
+import toast from "react-hot-toast"
 
 const GoogleCredButton = () => {
   const [isPending, setIsPending] = useState(false)

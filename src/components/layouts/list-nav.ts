@@ -1,18 +1,16 @@
 import {
-  IconCamera,
-  IconChartBar,
+  IconBuildingWarehouse,
+  IconCategory,
   IconDashboard,
   IconDatabase,
-  IconFileAi,
-  IconFileDescription,
   IconFileWord,
-  IconFolder,
   IconHelp,
   IconListDetails,
+  IconMilitaryRank,
   IconReport,
   IconSettings,
-  IconUsers,
 } from "@tabler/icons-react"
+import { AlertCircle } from "lucide-react";
 
 export const listDashboardNav = {
   navMain: [
@@ -22,73 +20,41 @@ export const listDashboardNav = {
       icon: IconDashboard,
     },
     {
-      title: "Kost",
-      url: "/dashboard/all-kost",
+      title: "Manajemen Kost",
+      url: "/dashboard/kost",
       icon: IconListDetails,
-    },
-    {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
-    },
-    {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
-    },
-    {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
+      open: true,
+      children: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "List Kost",
+          url: "/dashboard/kost",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Tambah Kost",
+          url: "/dashboard/kost/add-kost",
+        },
+        {
+          title: "Tambah Kamar",
+          url: "/dashboard/kost/add-room",
         },
       ],
     },
     {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
+      title: "Manajemen Rumah",
+      url: "/dashboard/rent",
+      icon: IconBuildingWarehouse,
+      open: true,
+      children: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "List Rumah",
+          url: "/dashboard/rent",
         },
         {
-          title: "Archived",
-          url: "#",
-        },
+          title: "Tambah Rumah",
+          url: "/dashboard/rent/add-rent",
+        }
       ],
-    },
-    {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
+    }
   ],
   navSecondary: [
     {
@@ -97,9 +63,26 @@ export const listDashboardNav = {
       icon: IconSettings,
     },
     {
-      title: "Get Help",
-      url: "#",
+      title: "Petunjuk",
+      url: "/dashboard/guide",
       icon: IconHelp,
+    },
+    {
+      title: "Lapor Bugs",
+      url: "/dashboard/report-bug",
+      icon: AlertCircle,
+    },
+  ],
+  navMaster: [
+    {
+      title: "Fasilitas",
+      url: "/dashboard/facilities",
+      icon: IconMilitaryRank,
+    },
+    {
+      title: "Tipe",
+      url: "/dashboard/categories",
+      icon: IconCategory,
     },
   ],
   documents: [

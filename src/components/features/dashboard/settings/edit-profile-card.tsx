@@ -17,7 +17,7 @@ const EditProfileCard = ({ session }: { session: Session['user'] | null | undefi
                 <CardTitle>Update Profile <span 
                     role='button' 
                     tabIndex={0} 
-                    className={buttonVariants({ variant: 'secondary', size: 'iconSm' })} 
+                    className={buttonVariants({ variant: 'secondary', size: 'icon-sm' })} 
                     onClick={() => setOpen((prev) => !prev)}
                     >
                         <HelpCircleIcon />

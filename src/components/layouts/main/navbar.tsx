@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav data-state={menuState && 'active'} className="relative z-20 w-full border-b border-dashed bg-white backdrop-blur dark:bg-zinc-950/50 lg:dark:bg-transparent">
+            <nav data-state={menuState && 'active'} className="relative z-20 w-full border-b border-dashed backdrop-blur">
                 <div className="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
                     <div className="flex w-full justify-between lg:w-auto">
                         <Link href="/" aria-label="home" className="flex items-center space-x-2 font-bold uppercase">
